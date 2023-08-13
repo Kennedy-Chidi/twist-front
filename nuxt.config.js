@@ -120,11 +120,11 @@ export default {
   },
 
   axios: {
-    baseURL: "/api",
+    baseURL: "https://twist.up.railway.app/api",
   },
 
   publicRuntimeConfig: {
-    FILE_URL: "/uploads",
+    FILE_URL: "https://twist.up.railway.app/uploads",
   },
 
   // axios: {

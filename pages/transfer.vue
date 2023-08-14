@@ -1,5 +1,5 @@
 <template>
-  <div class="dashboard-wrapper withdraw">
+  <div class="dashboard-wrapper home">
     <dashboard-navigation />
     <div class="dashboard-content">
       <dashboard-header />

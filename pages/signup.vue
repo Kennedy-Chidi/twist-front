@@ -227,7 +227,7 @@
                           </ul>
                         </div>
                       </div>
-                      <div class="register-form-holder">
+                      <!-- <div class="register-form-holder">
                         <div class="register-input-text-holder">
                           <div class="register-input-texts">
                             Currency Type <span>*</span>
@@ -268,7 +268,7 @@
                             </li>
                           </ul>
                         </div>
-                      </div>
+                      </div> -->
 
                       <div class="register-form-holder">
                         <div class="register-input-text-holder">
@@ -788,14 +788,15 @@
                     />
                   </div>
                   <div class="div-block-150">
-                    <a
+                    <span
                       v-if="formPage == 3"
                       :class="{ active: complete }"
                       @click="processUserData"
-                      href="#"
                       class="register-submit-button w-button"
-                      >Submit</a
                     >
+                      <span v-show="!onRequest">Submit</span>
+                      <span v-show="onRequest">Processing...</span>
+                    </span>
                     <span
                       @click="switchForm('next')"
                       v-else
@@ -893,12 +894,14 @@ export default {
       msg: "",
       colour: false,
       showMsg: false,
+      onRequest: false,
     };
   },
   methods: {
     showMessage(msg) {
       this.msg = msg;
       this.showMsg = true;
+      this.onRequest = false;
       setTimeout(() => {
         this.msg = "";
         this.showMsg = false;
@@ -907,7 +910,10 @@ export default {
 
     clearInputs() {
       this.colour = true;
-      this.showMessage("Verify the link sent to your email to continue.");
+      this.onRequest = false;
+      this.showMessage(
+        "Congratulations! You have signed up successfully, please login to continue"
+      );
       this.firstName = "";
       this.middleName = "";
       this.lastName = "";
@@ -1077,12 +1083,15 @@ export default {
 
     processUserData() {
       if (this.dob == "") {
+        this.onRequest = false;
         this.showMessage("Please choose date of birth");
         return;
       }
       if (this.password != this.cPassword) {
+        this.onRequest = false;
         this.showMessage("Sorry, password do not match.");
       } else {
+        this.onRequest = true;
         const form = new FormData();
         form.append("firstName", this.firstName);
         form.append("middleName", this.middleName);
@@ -1107,7 +1116,7 @@ export default {
         form.append("phoneNumber1", this.phoneNumber1);
         form.append("phoneNumber2", this.phoneNumber2);
         form.append("email", this.email);
-        form.append("currency", this.currency);
+        form.append("currency", "USD");
         form.append("regDate", new Date().getTime());
         form.append("profilePicture", this.profilePicture);
         form.append("idPicture", this.idPicture);
@@ -1126,6 +1135,9 @@ export default {
     async createUser(form) {
       try {
         await this.$axios.post(`/users/signup`, form);
+        setTimeout(() => {
+          this.$router.push("/login");
+        }, 7000);
         this.clearInputs();
       } catch (err) {
         this.showMessage(err.response.data.message);

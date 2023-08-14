@@ -80,6 +80,12 @@
                 <div class="register-button-holder">
                   <div class="div-block-150">
                     <span
+                     v-show="onRequest"
+                      class="register-submit-button w-button active"
+                      >Processing...</span
+                    >
+                    <span
+                    v-show="!onRequest"
                       @click="processUserData"
                       class="register-submit-button w-button active"
                       >Submit</span
@@ -110,12 +116,14 @@ export default {
       msg: "",
       colour: false,
       showMsg: false,
+      onRequest:false
     };
   },
   methods: {
     showMessage(msg) {
       this.msg = msg;
       this.showMsg = true;
+      this.onRequest =false
       setTimeout(() => {
         this.msg = "";
         this.showMsg = false;
@@ -123,6 +131,7 @@ export default {
     },
 
     processUserData() {
+      this.onRequest = true
       if (!this.complete) {
       } else {
         const form = {
@@ -141,6 +150,7 @@ export default {
         } else {
           this.$router.push("admin");
         }
+        this.onRequest = false
       } catch (err) {
         this.showMessage(err.response.data.message);
       }

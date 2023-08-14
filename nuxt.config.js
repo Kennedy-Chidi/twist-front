@@ -45,6 +45,11 @@ export default {
 
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: "/css/dashboard.css",
+        type: "text/css",
+      },
       { rel: "stylesheet", type: "text/css", href: "/css/main.css" },
       { rel: "stylesheet", type: "text/css", href: "/css/custom.css" },
       { href: "https://fonts.googleapis.com", rel: "preconnect" },

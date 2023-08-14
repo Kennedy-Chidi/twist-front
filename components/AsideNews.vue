@@ -1,31 +1,6 @@
 <template>
   <div class="second-blog-content-holder">
     <div>
-      <div class="form-space-bar-holder w-form">
-        <form
-          id="email-form"
-          name="email-form"
-          data-name="Email Form"
-          method="get"
-        >
-          <div class="space-bar-holder">
-            <input
-              type="text"
-              class="space-bar w-input"
-              maxlength="256"
-              name="name"
-              data-name="Name"
-              placeholder="enter Keywords"
-              id="name"
-            /><img
-              src="https://uploads-ssl.webflow.com/6405430dbac1369b9494f2e3/64063f49ee6ec7493c7588d5_search-line-icon%20(1)%202.svg"
-              loading="lazy"
-              alt=""
-              class="image-31"
-            />
-          </div>
-        </form>
-      </div>
       <div class="each-side-link-holder">
         <h1 class="blog-link-header">Categories</h1>
         <div>
@@ -119,43 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="third-blog-side-link-holder">
-        <div class="blog-link-header-holder">
-          <h1 class="blog-link-header">Blog</h1>
-        </div>
-        <div
-          data-delay="4000"
-          data-animation="slide"
-          class="slider-4 w-slider"
-          data-autoplay="false"
-          data-easing="ease"
-          data-hide-arrows="false"
-          data-disable-swipe="false"
-          data-autoplay-limit="0"
-          data-nav-spacing="3"
-          data-duration="500"
-          data-infinite="true"
-        >
-          <div class="w-slider-mask">
-            <div class="slide-post w-slide">
-              <a href="#" class="slide-post-img w-inline-block"></a>
-            </div>
-            <div class="slide-post w-slide">
-              <a href="#" class="slide-post-img second w-inline-block"></a>
-            </div>
-            <div class="slide-post w-slide">
-              <a href="#" class="slide-post-img third w-inline-block"></a>
-            </div>
-          </div>
-          <div class="left-arrow-4 w-slider-arrow-left">
-            <div class="w-icon-slider-left"></div>
-          </div>
-          <div class="right-arrow-4 w-slider-arrow-right">
-            <div class="w-icon-slider-right"></div>
-          </div>
-          <div class="w-slider-nav w-slider-nav-invert w-round"></div>
-        </div>
-      </div>
+
       <div class="fourth-blog-side-link-holder">
         <div class="blog-link-header-holder">
           <h1 class="blog-link-header">Contacts:</h1>

@@ -34,33 +34,7 @@
                   <div class="div-block-101">
                     <a href="#" class="news-text-link">Adivce,</a>
                   </div>
-                  <a href="#" class="news-text-link">AS Finance</a>
-                </div>
-                <div class="blog-icon-holder">
-                  <a href="#" class="comment-amount-holder w-inline-block"
-                    ><img
-                      src="https://uploads-ssl.webflow.com/6405430dbac1369b9494f2e3/64062db80c1ec3bec200ef36_send-message-icon%201.svg"
-                      loading="lazy"
-                      alt=""
-                      class="image-29"
-                    />
-                    <div class="link-amount">0</div></a
-                  ><a
-                    href="#"
-                    class="comment-amount-holder change w-inline-block"
-                    ><img
-                      src="https://uploads-ssl.webflow.com/6405430dbac1369b9494f2e3/64085c037186c673b80086a6_Group.svg"
-                      loading="lazy"
-                      alt=""
-                      class="image-30"
-                    />
-                    <div class="div-block-104">
-                      <div class="div-block-107">
-                        <div class="link-amount">2</div>
-                        <div class="link-amount">2</div>
-                      </div>
-                    </div></a
-                  >
+                  <a href="#" class="news-text-link">Zivik Bank</a>
                 </div>
               </div>
               <div class="news-head-link-holder">

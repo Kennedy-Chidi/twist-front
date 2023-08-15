@@ -490,47 +490,8 @@
 
           <!--=================================KIN INFO====================================-->
           <div class="input-wrapper w-form">
-            <h3 class="user-info-title">Next of Kin</h3>
-            <form class="input-form">
-              <div class="each-input">
-                <label for="name-4" class="input-label"
-                  >Full Name<span class="important">*</span></label
-                ><input
-                  type="text"
-                  class="plan-input w-input"
-                  maxlength="256"
-                  v-model="kinFullName"
-                />
-              </div>
-              <div class="each-input">
-                <label for="email-4" class="input-label">Address</label
-                ><input
-                  type="email"
-                  class="plan-input w-input"
-                  maxlength="256"
-                  v-model="kinAddress"
-                />
-              </div>
-              <div class="each-input">
-                <label for="email-4" class="input-label"
-                  >Relationship <span class="important">*</span></label
-                ><input
-                  type="email"
-                  class="plan-input w-input"
-                  maxlength="256"
-                  v-model="kinRelationship"
-                />
-              </div>
-              <div class="each-input">
-                <label for="duration-3" class="input-label"
-                  >Email <span class="important">*</span></label
-                ><input
-                  type="email"
-                  class="plan-input w-input"
-                  maxlength="256"
-                  v-model="kinEmail"
-                />
-              </div>
+            <h3 class="user-info-title">Login Info</h3>
+            <div class="input-form">
               <div class="each-input">
                 <label for="password-3" class="input-label"
                   >Old Password<span class="important">*</span></label
@@ -602,7 +563,7 @@
                   class="button reset w-button"
                 />
               </div>
-            </form>
+            </div>
           </div>
           <!--==============================X==KIN INFO==X=================================-->
         </div>
@@ -959,8 +920,9 @@ export default {
     },
 
     async updateUser(form) {
+      console.log(form);
       try {
-        await this.$axios.patch(`/users/${this.editId}`, form);
+        await this.$axios.patch(`/users/edit-user/${this.editId}`, form);
         this.showResponseMsg("The user was updated successfully", true);
       } catch (err) {
         this.showResponseMsg(err.response.data.message, false);

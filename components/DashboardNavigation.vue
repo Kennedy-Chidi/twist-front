@@ -201,6 +201,10 @@ export default {
   left: 0;
 }
 
+.nav-links.w-inline-block {
+  display: flex;
+}
+
 .my-element {
   position: relative;
   display: block;

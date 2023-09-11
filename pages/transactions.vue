@@ -63,6 +63,7 @@
                   <td>Type</td>
                   <td>Sender</td>
                   <td>Receiver</td>
+                  <td>Narration</td>
                   <td>Date</td>
                 </tr>
               </thead>
@@ -77,10 +78,12 @@
                   <td v-if="user.username != transaction.username">
                     {{ transaction.username }}
                   </td>
+                  <td v-if="transaction.sender">{{ transaction.sender }}</td>
                   <td v-else>You</td>
                   <td>
                     {{ transaction.receiverName }}
                   </td>
+                  <td>{{ transaction.narration }}</td>
                   <td>
                     {{ getTime(transaction.dateCreated) }},
                     {{ formatDate(transaction.dateCreated) }}

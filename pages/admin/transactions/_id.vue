@@ -238,6 +238,15 @@
                   v-model="datetime"
                 />
               </div>
+              <div class="each-input">
+                <label for="email-3" class="input-label"
+                  >Sender<span class="important">*</span></label
+                ><input
+                  type="text"
+                  class="plan-input w-input"
+                  v-model="sender"
+                />
+              </div>
               <div class="each-input content">
                 <label for="field-2" class="input-label"
                   >Narration
@@ -298,6 +307,7 @@ export default {
       accountType: "Choose Account",
       account: "",
       narration: "",
+      sender: "",
       amount: "",
       date: "",
       user: "",
@@ -440,8 +450,10 @@ export default {
         receiverUsername: this.account.username,
         username: this.account.username,
         amount: this.amount,
+        narration: this.narration,
+        sender: this.sender,
         account: this.account,
-        transactionType: this.transactionType,
+        transactionType: "deposit",
         autoTransact: true,
         user: this.user,
         date:
@@ -530,6 +542,7 @@ export default {
       try {
         const result = await this.$axios.get(`/account/${username}`);
         this.account = result.data.data;
+        console.log(this.account);
       } catch (err) {
         console.log(err.response.data.message);
       }

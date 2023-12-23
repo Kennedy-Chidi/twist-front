@@ -9,7 +9,7 @@
     "generate": "nuxt generate"
   },
   "engines": {
-    "node": ">=16.10.0"
+    "node": ">=18.15.0"
   },
   "dependencies": {
     "@blowstack/ckeditor-nuxt": "^0.6.0",

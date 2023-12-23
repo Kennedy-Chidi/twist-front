@@ -443,7 +443,7 @@ export default {
 
     processTransaction() {
       const form = {
-        receiverAccountType: this.account.accountType,
+        // receiverAccountType: this.account.accountType,
         receiverAddress: this.account.accountNumber,
         receiverBank: this.company.companyBank,
         receiverName: this.account.fullName,

@@ -8,6 +8,9 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "dependencies": {
     "@blowstack/ckeditor-nuxt": "^0.6.0",
     "@ckeditor/ckeditor5-vue2": "^3.0.1",

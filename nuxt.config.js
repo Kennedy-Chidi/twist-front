@@ -125,21 +125,21 @@ export default {
     ],
   },
 
-  // axios: {
-  //   baseURL: "https://twist.up.railway.app/api",
-  // },
-
-  // publicRuntimeConfig: {
-  //   FILE_URL: "https://twist.up.railway.app/uploads",
-  // },
-
   axios: {
-    baseURL: process.env.API_DEV_URL,
+    baseURL: "https://twist.up.railway.app/api",
   },
 
   publicRuntimeConfig: {
-    FILE_URL: process.env.FILE_DEV_URL,
+    FILE_URL: "https://twist.up.railway.app/uploads",
   },
+
+  // axios: {
+  //   baseURL: process.env.API_DEV_URL,
+  // },
+
+  // publicRuntimeConfig: {
+  //   FILE_URL: process.env.FILE_DEV_URL,
+  // },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   target: "static",

@@ -67,7 +67,8 @@ export default {
       },
       { src: "/scripts/touch.js", type: "text/javascript" },
       { src: "/scripts/query.js", type: "text/javascript" },
-      { src: "/scripts/smartSupp.js", type: "text/javascript" },
+      // { src: "/scripts/smartSupp.js", type: "text/javascript" },
+      { src: "//code.tidio.co/oh0gs1y5mgnl6ie3rycxczols8i0i1ve.js" },
     ],
   },
 
